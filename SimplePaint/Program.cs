@@ -1,9 +1,8 @@
-using Avalonia;
-using Avalonia.Controls.ApplicationLifetimes;
+﻿using Avalonia;
 using Avalonia.ReactiveUI;
 using System;
 
-namespace graphicsEditor
+namespace SimplePaint
 {
     internal class Program
     {

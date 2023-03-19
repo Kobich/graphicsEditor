@@ -1,9 +1,9 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using graphicsEditor.ViewModels;
+using SimplePaint.ViewModels;
 using System;
 
-namespace graphicsEditor
+namespace SimplePaint
 {
     public class ViewLocator : IDataTemplate
     {
@@ -16,10 +16,8 @@ namespace graphicsEditor
             {
                 return (Control)Activator.CreateInstance(type)!;
             }
-            else
-            {
-                return new TextBlock { Text = "Not Found: " + name };
-            }
+
+            return new TextBlock { Text = "Not Found: " + name };
         }
 
         public bool Match(object data)

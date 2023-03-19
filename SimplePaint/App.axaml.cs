@@ -1,10 +1,9 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using graphicsEditor.ViewModels;
-using graphicsEditor.Views;
+using SimplePaint.Views;
 
-namespace graphicsEditor
+namespace SimplePaint
 {
     public partial class App : Application
     {
@@ -17,10 +16,7 @@ namespace graphicsEditor
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow
-                {
-                    DataContext = new MainWindowViewModel(),
-                };
+                desktop.MainWindow = new MainWindow();
             }
 
             base.OnFrameworkInitializationCompleted();
